@@ -1,0 +1,201 @@
+// $color: red; //定义变量
+
+// body {
+//   background-color: $color; //使用变量
+//   div {
+//     color: white;
+//   }
+//   p {
+//     font-size: 20px;
+//     color: white;
+//   }
+// }
+
+$backcolor: #060a3d;
+$color: white;
+$color1: #868aaf;
+$color2: #db3baa;
+$color2-dark: darken($color, 10%);
+$color2-darker: darken($color, 30%);
+$color3: #0025f1;
+* {
+  margin: 0;
+  padding: 0;
+}
+#player {
+  // height: 100vh;
+  // height: 100%;
+  background-color: $backcolor;
+  text-align: center;
+  &::-webkit-scrollbar {
+    width: 0 !important;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // .clear {
+    //   //取消外边距合并
+    //   padding: 0.1px;
+    // }
+    h1 {
+      color: $color;
+      font-size: 20px;
+      //   margin-top: 20px;
+      padding-top: 20px;
+      text-overflow: ellipsis;
+      width: 209px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    p {
+      color: $color1;
+      font-size: 12px;
+    }
+  }
+}
+
+.area-effect {
+  .balls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    span {
+      display: block;
+      width: 5px;
+      height: 5px;
+      background-color: $color2-darker;
+      border-radius: 50%;
+      margin: 0 4px;
+      &.balls-current {
+        //既是span 又是 current
+        width: 8px;
+        height: 8px;
+        background-color: $color2;
+      }
+    }
+  }
+}
+
+.parnel-effect {
+  .effect {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // height: 50vh;
+    height: 80%;
+    // height: 320px;
+    margin-top: 20px;
+    overflow: hidden;
+    > div {
+      //   width: 70vw;
+      //   height: 70vw;
+      position: absolute;
+    }
+    // .effect1 {
+    //   background: url(../svg/圆形布局.svg) 0 0 no-repeat;
+    //   width: 40vw;
+    //   height: 40vw;
+    //   background-size: contain;
+    //   z-index: 1;
+    //   animation: trans 20s linear infinite;
+    // }
+    .effect2 {
+      background: url(../svg/圆.svg) 50% 50% no-repeat;
+      // mask-image: url(../svg//圆.svg);
+      // -webkit-mask-image: url(../svg//圆.svg);
+      // -webkit-mask:  url(../svg/圆.svg) no-repeat 50% 50%;
+      width: 40vw;
+      height: 40vw;
+      background-size: contain;
+      animation: trans 10s linear infinite reverse;
+    }
+    .effect3 {
+      background: url(../svg/音乐.svg) 50% 50% no-repeat;
+      width: 80vw;
+      height: 80vw;
+      background-size: contain;
+      animation: trans 10s linear infinite;
+    }
+  }
+  .lyrics {
+    text-align: center;
+    p {
+      font-size: 13px;
+      color: $color1;
+      margin-top: 10px;
+      &.current {
+        color: $color;
+      }
+    }
+  }
+}
+.buttons {
+  margin-top: 20px;
+  > svg {
+    margin: 0 23px;
+  }
+}
+.area-bar {
+  color: $color1;
+  font-size: 12px;
+  display: flex;
+  padding: 0 20px;
+  margin-top: 20px;
+  align-items: center;
+  .time-start {
+    order: 1;
+  }
+  .time-end {
+    order: 3;
+  }
+  .bar {
+    order: 2;
+    flex: 1;
+    height: 4px;
+    background: $color3;
+    border-radius: 2px;
+    margin: 0 10px;
+    .progress {
+      width: 30%;
+      height: 100%;
+      border-radius: 2px;
+      background: $color2;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: -7px;
+        display: block;
+        width: 16px;
+        height: 16px;
+        background: url(../svg/圆形.svg) 0 0 no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}
+.actions {
+  // margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  > svg {
+    margin: 0 20px;
+  }
+}
+
+@keyframes trans {
+  0% {
+    transform: rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0.5;
+  }
+}
