@@ -112,7 +112,7 @@ svgcontent.innerHTML = "\n<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/sv
 },{}],"src/js/index.js":[function(require,module,exports) {
 "use strict";
 
-require("./icons");
+require("./icons.js");
 
 // import "../scss/index.scss";
 var areaeffect = document.getElementsByClassName("area-effect");
@@ -130,7 +130,7 @@ player[0].setAttribute('style', "height: ".concat(screen.height, "px"));
 console.log(player);
 console.log(player[0].style.height);
 console.log("你好");
-},{"./icons":"src/js/icons.js"}],"node_modules/_parcel-bundler@1.11.0@parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./icons.js":"src/js/icons.js"}],"node_modules/_parcel-bundler@1.11.0@parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
