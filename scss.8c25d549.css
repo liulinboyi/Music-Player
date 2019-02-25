@@ -1,0 +1,158 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#player {
+  background-color: #060a3d;
+  text-align: center;
+}
+#player::-webkit-scrollbar {
+  width: 0 !important;
+}
+#player .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#player .header h1 {
+  color: white;
+  font-size: 20px;
+  padding-top: 20px;
+  text-overflow: ellipsis;
+  width: 209px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#player .header p {
+  color: #868aaf;
+  font-size: 12px;
+}
+
+.area-effect .balls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.area-effect .balls span {
+  display: block;
+  width: 5px;
+  height: 5px;
+  background-color: #b3b3b3;
+  border-radius: 50%;
+  margin: 0 4px;
+}
+.area-effect .balls span.balls-current {
+  width: 8px;
+  height: 8px;
+  background-color: #db3baa;
+}
+
+.parnel-effect .effect {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  margin-top: 20px;
+  overflow: hidden;
+}
+.parnel-effect .effect > div {
+  position: absolute;
+}
+.parnel-effect .effect .effect2 {
+  background: url(圆.c6dadd6f.svg) 50% 50% no-repeat;
+  width: 40vw;
+  height: 40vw;
+  background-size: contain;
+  animation: trans 10s linear infinite reverse;
+}
+.parnel-effect .effect .effect3 {
+  background: url(音乐.a7c7ee2a.svg) 50% 50% no-repeat;
+  width: 80vw;
+  height: 80vw;
+  background-size: contain;
+  animation: trans 10s linear infinite;
+}
+.parnel-effect .lyrics {
+  text-align: center;
+}
+.parnel-effect .lyrics p {
+  font-size: 13px;
+  color: #868aaf;
+  margin-top: 10px;
+}
+.parnel-effect .lyrics p.current {
+  color: white;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+.buttons > svg {
+  margin: 0 23px;
+}
+
+.area-bar {
+  color: #868aaf;
+  font-size: 12px;
+  display: flex;
+  padding: 0 20px;
+  margin-top: 20px;
+  align-items: center;
+}
+.area-bar .time-start {
+  order: 1;
+}
+.area-bar .time-end {
+  order: 3;
+}
+.area-bar .bar {
+  order: 2;
+  flex: 1;
+  height: 4px;
+  background: #0025f1;
+  border-radius: 2px;
+  margin: 0 10px;
+}
+.area-bar .bar .progress {
+  width: 30%;
+  height: 100%;
+  border-radius: 2px;
+  background: #db3baa;
+  position: relative;
+}
+.area-bar .bar .progress::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -7px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url(圆形.4f119ebb.svg) 0 0 no-repeat;
+  background-size: contain;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.actions > svg {
+  margin: 0 20px;
+}
+
+@keyframes trans {
+  0% {
+    transform: rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0.5;
+  }
+}
