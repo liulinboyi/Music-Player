@@ -171,12 +171,7 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"node_modules/_parcel-bundler@1.11.0@parcel-bundler/src/builtins/bundle-url.js"}],"src/scss/index.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./..\\svg\\圆.svg":[["圆.c6dadd6f.svg","src/svg/圆.svg"],"src/svg/圆.svg"],"./..\\svg\\音乐.svg":[["音乐.a7c7ee2a.svg","src/svg/音乐.svg"],"src/svg/音乐.svg"],"./..\\svg\\圆形.svg":[["圆形.4f119ebb.svg","src/svg/圆形.svg"],"src/svg/圆形.svg"],"_css_loader":"node_modules/_parcel-bundler@1.11.0@parcel-bundler/src/builtins/css-loader.js"}],"node_modules/_parcel-bundler@1.11.0@parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./bundle-url":"node_modules/_parcel-bundler@1.11.0@parcel-bundler/src/builtins/bundle-url.js"}],"node_modules/_parcel-bundler@1.11.0@parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -203,7 +198,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57179" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53263" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
