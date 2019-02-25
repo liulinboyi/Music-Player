@@ -1,5 +1,5 @@
 // import "../scss/index.scss";
-import "./icons";
+import "./icons.js";
 let areaeffect = document.getElementsByClassName("area-effect");
 console.log(areaeffect);
 console.log(screen.height)
